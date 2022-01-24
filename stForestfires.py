@@ -39,3 +39,5 @@ We can see all the data here by pressing check button.
 """
 #TODO: add code to show the raw data table only when the checkbox is selected 
 
+if st.checkbox('Show the raw data')
+    data
