@@ -45,3 +45,10 @@ if st.checkbox('Show the raw data'):
 "## Filtering Data by the Burned Area"
 #TODO: add slider to the sidebar
 min_area, max_area = st.sidebar.slider('area',value=[0,1100])
+
+
+#TODO: using the min_area and max_area, store filtered data into data
+data = data[data[area] >= min_area and data[area] <= max_area]
+
+
+"The number of filtered data samples: ", data.shape[0]
