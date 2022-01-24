@@ -42,6 +42,6 @@ We can see all the data here by pressing check button.
 if st.checkbox('Show the raw data'):
     data
 
-    "## Filtering Data by the Burned Area"
+"## Filtering Data by the Burned Area"
 #TODO: add slider to the sidebar
 min_area, max_area = st.sidebar.slider('area',value=[0,1100])
