@@ -54,7 +54,7 @@ data = data[data['area'].between(min_area,max_area)]
 "The number of filtered data samples: ", data.shape[0]
 
    
-fig, axes = plt.subplots(2,2)
+"""fig, axes = plt.subplots(2,2)
 
 # TODO: Using plot.scatter in pandas, plot X, Y in axes[0][0] (top-left subplot area)
 
@@ -76,6 +76,21 @@ axes[1][0].set_ylabel('area')
 axes[1][1].scatter(data['wind'], data['area'])
 axes[1][1].set_xlabel('wind')
 axes[1][1].set_ylabel('area')
+
+plt.tight_layout()
+st.pyplot(fig)"""
+
+
+   
+fig, axes = plt.subplots(2,2)
+
+# TODO: Using plot.scatter in pandas, plot X, Y in axes[0][0] (top-left subplot area)
+
+data['X'].plot(y=data['Y'], ax=axes[0, 0])
+data['wind'].plot(y=y=data['wind'].value_counts(), ax=axes[0, 1])
+data['temp'].plot(y=data['area'], ax=axes[1, 0])
+data['wind'].plot(y=data['area'], ax=axes[1, 1])
+
 
 plt.tight_layout()
 st.pyplot(fig)
