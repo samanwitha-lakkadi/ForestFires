@@ -57,16 +57,16 @@ fig, axes = plt.subplots(2,2)
 
 # TODO: Using plot.scatter in pandas, plot X, Y in axes[0][0] (top-left subplot area)
 
-plt.scatter(data['X'], data['Y'], ax=axes[0, 0])
+data.plot.scatter(data['X'], data['Y'], ax=axes[0, 0])
 
 # TODO: Using plot.hist in pandas, plot histogram of area data in axes[0][1] (top-right subplot area)
-plt.hist(data['wind'], data['area'].value_counts(), ax=axes[0, 1])
+data.plot.hist(data['wind'], data['area'].value_counts(), ax=axes[0, 1])
 
 # TODO: Using plot in pandas, plot area for temp in axes[1][0] (bottom-left subplot area)
-plt.scatter(data['temp'], data['area'], ax=axes[1, 0])
+data.plot.scatter(data['temp'], data['area'], ax=axes[1, 0])
 
 # TODO: Using plot in pandas, plot area for wind in axes[1][1] (bottom-right subplot area)
-plt.scatter(data['wind'], data['area'], ax=axes[1, 1])
+data.plot.scatter(data['wind'], data['area'], ax=axes[1, 1])
 
 plt.tight_layout()
 st.pyplot(fig)
