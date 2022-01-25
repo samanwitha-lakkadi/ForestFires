@@ -63,7 +63,7 @@ axes[0][0].set_xlabel('X')
 axes[0][0].set_ylabel('Y')
 
 # TODO: Using plot.hist in pandas, plot histogram of area data in axes[0][1] (top-right subplot area)
-axes[0][1].hist(data['wind'],bins=50)
+axes[0][1].hist(data['wind'],bins=100)
 axes[0][1].set_xlabel('wind')
 axes[0][1].set_ylabel('Frequency')
 
