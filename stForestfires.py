@@ -87,7 +87,7 @@ fig, axes = plt.subplots(2,2)
 # TODO: Using plot.scatter in pandas, plot X, Y in axes[0][0] (top-left subplot area)
 
 data['X'].plot(y=data['Y'], ax=axes[0, 0])
-data['wind'].plot(y=y=data['wind'].value_counts(), ax=axes[0, 1])
+data['wind'].plot(y=data['wind'].value_counts(), ax=axes[0, 1])
 data['temp'].plot(y=data['area'], ax=axes[1, 0])
 data['wind'].plot(y=data['area'], ax=axes[1, 1])
 
