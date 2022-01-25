@@ -1,9 +1,8 @@
 
-import matplotlib.pyplot as plt
 import streamlit as st
+import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-
 
 # SETTING PAGE CONFIG TO WIDE MODE
 st.set_page_config(layout="wide")
@@ -54,20 +53,21 @@ data = data[data['area'].between(min_area,max_area)]
 
 "The number of filtered data samples: ", data.shape[0]
 
+   
 fig, axes = plt.subplots(2,2)
 
 # TODO: Using plot.scatter in pandas, plot X, Y in axes[0][0] (top-left subplot area)
 
-data.plot.scatter(data['X'], data['Y'], ax=axes[0, 0])
+axes[0].scatter(data['X'], data['Y'])
 
 # TODO: Using plot.hist in pandas, plot histogram of area data in axes[0][1] (top-right subplot area)
-data.plot.hist(data['wind'], data['area'].value_counts(), ax=axes[0, 1])
+axes[1].hist(data['wind'], data['area'].value_counts())
 
 # TODO: Using plot in pandas, plot area for temp in axes[1][0] (bottom-left subplot area)
-data.plot.scatter(data['temp'], data['area'], ax=axes[1, 0])
+axes[2].scatter(data['temp'], data['area'])
 
 # TODO: Using plot in pandas, plot area for wind in axes[1][1] (bottom-right subplot area)
-data.plot.scatter(data['wind'], data['area'], ax=axes[1, 1])
+axes[3].scatter(data['wind'], data['area'])
 
 plt.tight_layout()
 st.pyplot(fig)
